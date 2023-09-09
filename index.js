@@ -310,7 +310,6 @@ function drawChart(data) {
         d3.select(this).raise().classed("active", true);
     }
     function draggingCircle(d) { //drag controls
-        console.log(d.y, d3.event.y);
         d3.select(this) //adjust the values as required
             .attr("transform", `rotate(${90}) translate(${d.x >= Math.PI ? d3.event.y - (600 - 50 * svgSize) : d3.event.y - (600 - 50 * svgSize)},${-d3.event.x})`)
     }
@@ -435,7 +434,6 @@ function drawChart(data) {
                 color2: false
             }
             d.data.children.forEach(e => {
-                console.log(e.code, e.name);
                 if (e.code === "UDDU") {
                     clrFound.color1 = true
                 }
