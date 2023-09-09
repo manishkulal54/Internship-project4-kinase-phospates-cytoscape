@@ -3,7 +3,7 @@ It is d3js project to convert Cytoscape graph svg
 Input file must be a excel file and it sholud have the fields same as following
   
   
-     genes|sites|code |Frequency
+     Genes|Sites|Code |Frequency
      SLK  |S347 |UUDD+Kinase|10
      PTPN12|S571|UUDD+Phosphatase|2
 
