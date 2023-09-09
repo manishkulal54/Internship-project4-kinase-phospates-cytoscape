@@ -165,7 +165,7 @@ function fetchFileData(fileUrl, sheetIndex) { //fetch the data from the spreadsh
             const indexObj = {} // container for the index of kp
             let index = 0
             sheetData.forEach(row => {
-                let codeArr = row.code.split("+");
+                let codeArr = row.Code.split("+");
                 let code = codeArr[0];
                 let kp = codeArr[1];
                 if (!kp_Map.has(kp)) {
@@ -182,10 +182,10 @@ function fetchFileData(fileUrl, sheetIndex) { //fetch the data from the spreadsh
             })
             const geneObj = {} // container for the genes
             sheetData.forEach(row => {
-                let codeArr = row.code.split("+");
+                let codeArr = row.Code.split("+");
                 let code = codeArr[0];
                 let kp = codeArr[1];
-                let geneName = row.genes;
+                let geneName = row.Genes;
                 const kpNode = kp_Map.get(kp)
                 if (!(`${kp}-${geneName}` in geneObj)) {
                     geneObj[`${kp}-${geneName}`] = true //storing as kp-genname:true
@@ -199,11 +199,11 @@ function fetchFileData(fileUrl, sheetIndex) { //fetch the data from the spreadsh
             })
             let sitesObj = {} //container for the sites
             sheetData.forEach(row => {
-                let codeArr = row.code.split("+");
+                let codeArr = row.Code.split("+");
                 let code = codeArr[0];
                 let kp = codeArr[1];
-                let geneName = row.genes;
-                let siteName = row.sites;
+                let geneName = row.Genes;
+                let siteName = row.Sites;
                 let frequency = row.Frequency;
 
                 root.children[indexObj[kp]].children.forEach(gn => {
